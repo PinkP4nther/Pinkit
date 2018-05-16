@@ -20,7 +20,7 @@ static int __init run(void)
 
 static void __exit dun(void)
 {
-	printk(KERN_INFO "[+] MODULE INITIALIZED\n");
+	printk(KERN_INFO "[+] Happy Hacking!\n");
 }
 
 module_init(run);
