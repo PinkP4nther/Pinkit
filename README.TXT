@@ -6,7 +6,7 @@ INSTALL
 apt install build-essential linux-headers-$(uname -r)
 
 [Compile Kernel Module]
-cd Pinkit; make;
+cd Pinkit; make
 
 [Execute Reverse Shell]
 # nc must be installed
