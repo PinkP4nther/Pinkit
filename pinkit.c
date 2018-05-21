@@ -46,7 +46,7 @@ static void __exit munload(void)
 module_init(mload);
 module_exit(munload);
 
-MODULE_LICENSE(MD);
+MODULE_LICENSE(ML);
 MODULE_AUTHOR(MA);
 MODULE_DESCRIPTION(MD);
 MODULE_VERSION(MV);
