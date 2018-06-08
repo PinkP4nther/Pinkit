@@ -1,10 +1,6 @@
 # Pinkit
 A quick LKM rootkit that executes a reverse netcat shell with root privileges.
 
-# Disclaimer
-THIS LKM IS A POC ROOTKIT FOR THE PINKY'S PALACE V3 BOOT 2 ROOT CHALLENGE.
-THIS LKM IS NOT TO BE USED MALICIOUSLY!!!
-
 INSTALL
 [Dependencies]
 apt install build-essential linux-headers-$(uname -r)
